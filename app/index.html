@@ -1,11 +1,29 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
-    <title> </title>
+    <meta charset="utef-8">
+    <title>Bootstrap Example</title>
+
+    <!-- Last complied and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <!-- mobile adjustement -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
+    <!--
     <p>In Html, javascript statements are executed by the browser</p>
     <p id="demo"></p>
     <button onclick="document.getElementById('demo').innerHTML = Date()">This time is?</button>
@@ -15,8 +33,205 @@
     <p>Click "Try it " to display the first array element, after a string split</p>
     <button onclick="fSplittext()">Split</button>
     <p id="split">test</p>
+
+    <p>Test Reduce Function</p>
+    <button onclick="fReduce()"> Reduce</button>
+    <p id="reduce">number</p>
+
+
+    <p>Test Filter method</p>
+    <p>Minimum age: <input type="number" id="ageTocheck" value="18"></p>
+    <button onclick="filterfunction()">minimal_age</button>
+    <p id="filter">number</p>
+
+
+    <p>filter example from mdn</p>
+
+    <p>the words array consist of spray, limit, elite, exuberant, destruction</p>
+    <button onclick="filter_mdn()"> filter </button>
+    <p id="filter2">filtered array</p>
+
     <script src="js/test.js"></script>
 
+    <p>Press this <button onclick="randomnumber()"> button </button> to the a random number <p id="number"></p></p>
+-->
+
+    <div class="container">
+        <!-- Navs  Tabs-->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"> To do list</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#"> calander</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#"> exams date</a>
+            </li>
+        </ul>
+
+        <h1> my first bootstrap page</h1>
+        <p>This is some text.</p>
+
+        <div class="row">
+            <div class="col-sm-1" style="background-color:#e9f3fc">1</div>
+            <div class="col-sm-2" style="background-color:#d3e8f9">2</div>
+            <div class="col-sm-4<s" style="background-color:#beddf7">3</div>
+        </div>
+
+        <p> Use the mark element to
+            <mark>highlight</mark>text.</p>
+        <p> the
+            <abbr title="world trade organization">WTO</abbr> is shit</p>
+        <footer class="blockquote-footer"> From JaosnJin</footer>
+
+        <dl>
+            <dt>Ipad</dt>
+            <dd>--mini</dd>
+            <dd>--pro</dd>
+            <dt>watch</dt>
+            <dd>--smart</dd>
+            <dd>--stupid</dd>
+        </dl>
+
+        <p>
+            <code>href</code> is used for the link attribute. and
+            <kbd>ctrl + f4</kbd> is used to close the window</p>
+
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary" style="background-color:black"> apple</button>
+            <button type="button" class="btn btn-primary"> huawei</button>
+            <button type="button" class="btn btn-primary"> samsung</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Add Task
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">normal</a>
+                <a class="dropdown-item" href="#">important</a>
+            </div>
+        </div>
+
+        <ul class="list-group">
+            <a href="http://google.de" target="blank" class="list-group-item list-group-item-action">google</a>
+        </ul>
+
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Add task type
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="http://google.de" target="blank">google</a>
+                <a class="dropdown-item" href="http://apple.de" target="blank">apple</a>
+                <a class="dropdown-item" href="http://rwth.de" target="blank">rwth</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">another</a>
+            </div>
+        </div>
+
+        <!-- collapsible -->
+        <button data-toggle="collapse" data-target="#demo">hide</button>
+        <div id="demo" class="collapse">
+            The
+            <code>.collapse</code> class indicates a collapsible element (a in our example); this is the content that will be shown or hidden with
+            a click of a button.
+        </div>
+
+        <a href="#demo_a" data-toggle="collapse">hide and show</a>
+
+        <div id="demo_a" class="collapse">
+            <b>Note</b>: For a elements, you can use the href attribute instead of the data-target attribute:
+        </div>
+
+        <!-- card -->
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title"> card title</h2>
+                <p class="card-text">some example text. ssome example text.</p>
+                <a href="http://google.de" target="blank" class="card-link"> card link</a>
+            </div>
+        </div>
+        <!-- accordion -->
+
+        <div id="accordion">
+
+            <div class="card">
+                <!-- card header -->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        first card
+                    </a>
+                </div>
+                <!-- implment the toggle effect on the card content -->
+                <div id="collapseOne" class="collapse show">
+                    <div class="card-body">
+                        Note: For
+                        <code> a </code> elements, you can use the href attribute instead of the data-target attribute:
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- card header -->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        second card
+                    </a>
+                </div>
+                <!-- implment the toggle effect on the card content -->
+                <div id="collapseTwo" class="collapse">
+                    <div class="card-body">
+                        Note: For
+                        <code> a </code> elements, you can use the href attribute instead of the data-target attribute:
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- card header -->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThird">
+                        third card
+                    </a>
+                </div>
+                <!-- implment the toggle effect on the card content -->
+                <div id="collapseThird" class="collapse">
+                    <div class="card-body">
+                        Note: For
+                        <code> a </code> elements, you can use the href attribute instead of the data-target attribute:
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Toggleable Dynamic Tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home"> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#to_do_list"> To do list</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+                <br>
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.</p>
+            </div>
+            <div id="to_do_list" class="container tab-pane fade">
+                <br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+        </div>
 
 </body>
 
